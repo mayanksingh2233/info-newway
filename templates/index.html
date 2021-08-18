@@ -14,7 +14,10 @@
 
 
     <!--core CSS -->
-    <link rel="stylesheet" href="static/core.css">
+    <link rel="stylesheet" href="static/css/core.css">
+    <!-- <link rel="stylesheet" href="static/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- <link rel="stylesheet" href="static/css/font-awesome.min.css"> -->
     <!-- Favicons -->
     <meta name="theme-color" content="#7952b3">
 
@@ -33,6 +36,10 @@
                 font-size: 3.5rem;
             }
         }
+
+        /* body {
+            background-image: url('static/aws.jpg');
+        } */
     </style>
 
 
@@ -40,17 +47,50 @@
 
 <body>
 
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h4 class="text-white">Contact</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                  <li><a href="#" class="text-white">Like on Facebook</a></li>
+                  <li><a href="#" class="text-white">Email me</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+          <div class="container">
+            <a href="/" class="navbar-brand d-flex align-items-center">
+              <!-- <svg  width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> -->
+              <img src="static/final title logo .png" width="50" alt="">
+              <strong class="mx-1"> New way Professionals</strong>
+              
+            </a>
+            <a href="https://newwayprofessionals.in/demo-book-page/">
+                <button type="button" class="btn btn-outline-primary">Book-Demo</button></a>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+          </div>
+        </div>
+      </header>
     <main>
         <section class="py-5 text-center container">
             <div class=" ">
-                <div class="col-lg-6 col-md-8 mx-auto">
+                <!-- <div class="col-lg-6 col-md-8 mx-auto">
                     <img src="static/final logo text.png" class="image-fluid" width="100%" height="210" alt="" />
 
-                </div>
+                </div> -->
             </div>
-            <center><h2>Our Courses</h2></center> 
+            <center>
+                <h2 class="mt-5">Our Courses</h2>
+            </center>
         </section>
-      
+
         <div class="album py-2 bg-light">
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2 ">
@@ -66,14 +106,14 @@
                             <img src="static/powershell.jpg" class="image-fluid" width="100%" height="228" alt="" />
                             <div class="card-body py-1">
                                 <p class="card-text">
-                                <h2>PowerShell</h2>This is a wider card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    {% comment %} <div class="btn-group mx-5">
+                                <h2 class="mt-0">PowerShell</h2>PowerShell is a powerful tool used to automated many
+                                day-to-day tasks that a Windows Admin or a normal Windows End User might encounter.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    {% comment %} <div class="btn-group mx-8">
                                         <button type="button" class="btn btn-outline-primary">Buy</button>
                                         <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                                     </div> {% endcomment %}
-                                    <div style="text-align: center;" class="btn btn-outline-primary">Buy</div>
+                                    <div style="text-align: center;" class="btn btn-outline-primary">Buy-Now</div>
                                 </div>
                             </div>
                         </div>
@@ -90,11 +130,14 @@
                             <img src="static/python.jpg" class="image-fluid" width="100%" height="207" alt="" />
                             <div class="card-body">
                                 <p class="card-text">
-                                <h2>Python</h2>This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
+                                <h2>Python</h2>Python is an interpreted, object-oriented, high-level programming
+                                language with dynamic semantics. It is simple, easy to learn syntax, emphasizes
+                                readability
+
+                                .</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-outline-primary">Buy</button>
+                                        <button type="button" class="btn btn-outline-primary">Buy-Now</button>
                                         <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                                     </div>
                                 </div>
@@ -113,11 +156,11 @@
                             <img src="static/aws.jpg" class="mt-2" width="100%" height="200" alt="" />
                             <div class="card-body">
                                 <p class="card-text">
-                                <h2>AWS</h2>This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
+                                <h2>AWS</h2>AWS is a comprehensive, evolving cloud computing platform provided by Amazon
+                                that includes a mixture of IaaS, PaaS and SaaS offerings.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-outline-primary">Buy</button>
+                                        <button type="button" class="btn btn-outline-primary">Buy-Now</button>
                                         <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                                     </div>
                                 </div>
@@ -137,10 +180,12 @@
                             <img src="static/devops.png" class="mt-2" alt="" />
                             <div class="card-body">
                                 <p class="card-text">
-                                <h2>DevOps</h2> This content is a little bit longer.</p>
+                                <h2>DevOps</h2>DevOps is the tools designed to increase an organization's ability to
+                                deliver applications and services faster than traditional software development
+                                processes.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-outline-primary">Buy</button>
+                                        <button type="button" class="btn btn-outline-primary">Buy-Now</button>
                                         <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                                     </div>
                                 </div>
@@ -157,53 +202,93 @@
                                     dy=".3em">Thumbnail</text>
                             </svg> {% endcomment %}
                             <img src="static/linux.jpg" class="mt-2" width="100%" height="142 alt="" />
-                            <div class="card-body">
-                                <p class="card-text">
-                                <h2>Linux</h2>This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-outline-primary">Buy</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
+                            <div class=" card-body">
+                            <p class="card-text">
+                            <h2 class="mt-5">Linux Administration</h2>Linux administration covers backups, file
+                            restores, new system builds, hardware maintenance, automation, application installation and
+                            much more.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-outline-primary">Buy-Now</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col"> -->
-                        <div class="card shadow-sm">
-                            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg> {% endcomment %}
-                            <img src="static/MicrosoftAzure.jpg" class="mt-2" width="100%" height="190" alt="" />
-                            <div class="card-body">
-                                <p class="card-text">
-                                <h2>Azure</h2>This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-outline-primary">Buy</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                </div>
+                </div>
+                <!-- <div class="col"> -->
+                <div class="card shadow-sm">
+                    {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em">Thumbnail</text>
+                    </svg> {% endcomment %}
+                    <img src="static/MicrosoftAzure.jpg" class="mt-2" width="100%" height="190" alt="" />
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h2>Azure Administration</h2>An Azure Administrator is responsible for implementing, monitoring
+                        and maintaining Microsoft Azure solutions, and other services too.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-outline-primary">Buy-Now</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
+        </div>
 
     </main>
-    <footer class="text-muted py-5">
+
+
+    <footer class="text-center">
+
         <div class="container">
             <p class="float-end mb-1">
-                <a href="#">Back to top</a>
+                <a href="#">Back-to-top</a>
             </p>
         </div>
+
+
+        <div class="container mt-5">
+            <!-- logo -->
+
+            <center>
+                <!-- <h2 class="logo2 text-center "> -->
+                <h2 class="logo2 mx-5 pt-5">
+                    <a class=""><img src="static/final title logo .png" width="50" alt="">
+                        New way Professionals
+                    </a>
+                </h2>
+            </center>
+            <!-- //logo -->
+            <!-- address -->
+            <div class="contact-left-footer mt-4">
+
+                <!-- <a href="community.html">Community</a> -->
+                </p>
+            </div>
+            <div class="w3l-copy text-center">
+                <p class="text-da">WZ56 Raj Nagar 1, Palam Colony, New Delhi - 110077, India| Phone: 8851793185 | Email:
+                    info@newwayprofessionals.in<br> </p>
+            </div>
+            <p>Copyright © 2021 Newwayprofessionals
+            </p>
+
+        </div>
     </footer>
+    <!-- //footer -->
+
+    <!-- move top icon -->
+    <a href="#home" class="move-top text-center"></a>
+    <!-- //move top icon -->
+
+
 
 
     <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"

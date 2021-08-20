@@ -5,7 +5,13 @@
 
 
 <main class="form-signin">
-  <form>
+  <form method="POST">
+  {% csrf_token %}
+  {% if message %}
+  <div class="alert alert-{{class}}">
+    {{message}}
+  </div>
+  {% endif %}
     
     <h1 class="h3 mb-3 fw-normal">Log-in first</h1>
     <div class="form-floating pb-2">
@@ -13,7 +19,7 @@
       <label for="floatingInput">Email address</label>
     </div>
          <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" name='mobile' placeholder="Enter Valid-phone-number">
+      <input type="password" class="form-control" id="floatingPassword" name='password' placeholder="Enter Valid-phone-number">
       <label >Password</label>
     </div>
 

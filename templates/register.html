@@ -93,6 +93,13 @@ body {
 
 <main class="form-signin">
   <form method="POST">
+  {% csrf_token %}
+
+  {% if message %}
+  <div class="alert alert-{{class}}">
+    {{message}}
+  </div>
+  {% endif %}
     <input type="hidden" name="csrfmiddlewaretoken" value="rFwln5IHTVcA5oN3il0YTa92LxqUtNOcNJvpClyGCWEvN8BRugcAyEu6zMlEvGgk">
     
     <h1 class="h3 mb-3 fw-normal">Register</h1>
@@ -110,12 +117,13 @@ body {
       <label >Mobile-number</label>
     </div>
      <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" name='mobile' placeholder="Enter Valid-phone-number">
+      <input type="password" class="form-control" id="floatingPassword" name='password' placeholder="Enter Valid-phone-number">
       <label >Password</label>
     </div>
 
     <button class="w-100 btn btn-lg btn-primary my-3" type="submit">Register</button>
   </form>
+  <p>Already have account? <a href="/login">Login</a></p>
 </main>
   </body>
 </html>

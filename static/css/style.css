@@ -1623,4 +1623,9 @@ a.move-top {
 	
 }
 
+section:nth-child(1) .media-icons i {
+	color: var(--primary-color);
+	color: #eee;
+}
+
 /*-- //Responsive design --*/

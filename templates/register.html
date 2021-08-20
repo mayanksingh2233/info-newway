@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>{% block title %} {% endblock title %}|page</title>
+    <title>Register|page</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
 crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
@@ -88,15 +89,33 @@ body {
     <link href="signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
-  {% block start %}
   
-  
-  
-  
-  
-  
-  {% endblock start %}
-    
 
+<main class="form-signin">
+  <form method="POST">
+    <input type="hidden" name="csrfmiddlewaretoken" value="rFwln5IHTVcA5oN3il0YTa92LxqUtNOcNJvpClyGCWEvN8BRugcAyEu6zMlEvGgk">
+    
+    <h1 class="h3 mb-3 fw-normal">Register</h1>
+
+    <div class="form-floating ">
+      <input type="text" class="form-control my-2" id="floatingPassword" name='name' placeholder="Enter-name">
+      <label >Name</label> 
+    </div>
+    <div class="form-floating pb-2">
+      <input type="email" class="form-control" id="floatingInput" name='email' placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+     <div class="form-floating pb-2">
+      <input type="text" class="form-control" id="floatingPassword" name='mobile' placeholder="Enter Valid-phone-number">
+      <label >Mobile-number</label>
+    </div>
+     <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" name='mobile' placeholder="Enter Valid-phone-number">
+      <label >Password</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary my-3" type="submit">Register</button>
+  </form>
+</main>
   </body>
 </html>

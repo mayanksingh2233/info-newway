@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate
 # Create your views here.
+
 def index(request):
     return render(request,'index.html')
 
@@ -22,11 +23,6 @@ def login(request):
             return render(request,'login.html',context)
     return render(request,'login.html')
             
-
-
-
-    
-
 def register(request):
     if request.method=="POST":
         email = request.POST.get("email")
@@ -49,10 +45,6 @@ def register(request):
             profile.save()
             print("profile created")
        
-     
         # user=User(email=email ,first_name=name)
         # user.save()
-
-  
-
     return render(request,'register.html')

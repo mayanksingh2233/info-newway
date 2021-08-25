@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&!1^ar8qsi=07wo!%3)vyol8g_kq8ac$2q7o1%sidk31z6v@em
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.newwayprofessionals.com','*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -127,5 +127,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [BASE_DIR.joinpath('static')]
 
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
+
+

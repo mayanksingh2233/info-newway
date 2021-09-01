@@ -10,6 +10,20 @@ from django.contrib.auth import authenticate
 def index(request):
     return render(request,'index.html')
 
+def about(request):
+    return render(request,'about.html')
+
+def courses(request):
+    return render(request,'courses.html')
+
+def contact(request):
+    return render(request,'contact.html')
+
+
+
+
+# login sigup code 
+
 # def login(request):
 #     if request.method =='POST':
 #         email =request.POST.get("email")

@@ -1,6 +1,7 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
+
 <head>
    
     <!--====== Required meta tags ======-->
@@ -13,7 +14,7 @@
     <title>Newwayprofessionals</title>
     
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="static/final title logo .png" type="image/png">
+    <link rel="shortcut icon" href="{% static 'final title logo .png' %}" type="image/png">
 
     <!--====== Slick css ======-->
     <link rel="stylesheet" href="static/css/slick.css">
@@ -49,8 +50,8 @@
 </head>
 
 <body>
-   
-    <!--====== PRELOADER PART START ======-->
+  
+  <!--====== PRELOADER PART START ======-->
     
     <div class="preloader">
         <div class="loader rubix-cube">
@@ -69,7 +70,7 @@
    
     <!--====== HEADER PART START ======-->
     
-    <header id="header-part">
+<header id="header-part">
        
         <div class="header-top d-none d-lg-block">
             <div class="container">
@@ -77,7 +78,7 @@
                     <div class="col-lg-6">
                         <div class="header-contact text-lg-left text-center">
                             <ul>
-                                <li><img src="static/images/all-icon/email.png" alt="icon"><span>info@newwayprofessionals.in</span></li>
+                            <li><img src="static/images/all-icon/email.png" alt="icon"><span>info@newwayprofessionals.in</span></li>
                             </ul>
                         </div>
                     </div>
@@ -95,7 +96,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4">
                         <div class="logo">
-                            <a href="{%url 'contact'%}">
+                            <a href="">
                                 <img src="static/finalmainlogo.png" width="200" alt="Logo">
                             </a>
                         </div>
@@ -114,19 +115,22 @@
                             <div class="button float-left">
                                 <a href="#" class="main-btn">Sign-Up</a>
                                 <a href="#" class="main-btn">Login</a>
+                                
+
                             </div>
                         </div>
                     </div>
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- header logo support -->
-        
-        <div class="navigation">
-            <div class="container">
+          <div class="navigation">
+            <div style="margin-top:1px;" class="container">
                 <div class="row">
-                    <div style=" margin: -10px;"  class="col-lg-10 col-md-10 col-sm-9 col-8">
+                    <div style=" margin: -10px;" class="col-lg-10 col-md-10 col-sm-9 col-8">
                         <nav class="navbar navbar-expand-lg">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -136,29 +140,79 @@
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
                                         <a class="active" href="{%url 'home'%}">Home</a>
-                                    
+                                        <!-- <ul class="sub-menu">
+                                            <li><a class="active" href="index-2.html">Home 01</a></li>
+                                            <li><a href="index-3.html">Home 02</a></li>
+                                            <li><a href="index-4.html">Home 03</a></li>
+                                        </ul> -->
                                     </li>
                                     <li class="nav-item">
                                         <a href="{%url 'about'%}">About us</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="{%url 'courses'%}">Courses</a>
-                                        
+                                        <!-- <ul class="sub-menu">
+                                            <li><a href="courses.html">Courses</a></li>
+                                            <li><a href="courses-singel.html">Course Singel</a></li>             
+                                        </ul> -->
                                     </li>
+                                    <!-- <li class="nav-item">
+                                        <a href="events.html">Events</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="events.html">Events</a></li>
+                                            <li><a href="events-singel.html">Event Singel</a></li>
+                                        </ul>
+                                    </li> -->
+                                    <!-- <li class="nav-item">
+                                        <a href="teachers.html">Our teachers</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="teachers.html">teachers</a></li>
+                                            <li><a href="teachers-singel.html">teacher Singel</a></li>
+                                        </ul>
+                                    </li> -->
+                                    <!-- <li class="nav-item">
+                                        <a href="blog.html">Blog</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog-singel.html">Blog Singel</a></li>
+                                        </ul>
+                                    </li> -->
+                                    <!-- <li class="nav-item">
+                                        <a href="shop.html">Shop</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="shop-singel.html">Shop Singel</a></li>
+                                        </ul>
+                                    </li> -->
                                     <li class="nav-item">
-                                        <a href="{% url 'contact'%}">Contact</a>
-                                        
+                                        <a href="{%url 'contact'%}">Contact</a>
+                                        <!-- <ul class="sub-menu">
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li><a href="contact-2.html">Contact Us 2</a></li>
+                                        </ul> -->
                                     </li>
                                 </ul>
+
                             </div>
+
                         </nav> <!-- nav -->
+
                     </div>
-                   
-                </div> <!-- row -->
-            </div> <!-- container -->
+
+                    <!-- <div class="col-lg-2 col-md-2 col-sm-3 col-4">
+                        <div class="right-icon text-right">
+                            <ul>
+                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-bag"></i><span>0</span></a></li>
+                            </ul>
+                        </div> <!-- right icon -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
         </div>
-        
+
     </header>
+
     
     <!--====== HEADER PART ENDS ======-->
    
@@ -180,131 +234,15 @@
     <!--====== SEARCH BOX PART ENDS ======-->
    
     <!--====== PAGE BANNER PART START ======-->
+    {% block body %}
     
-    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url(static/images/page-banner-6.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-banner-cont">
-                        <h2>Contact</h2>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{%url 'home'%}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Contact</li>
-                            </ol>
-                        </nav>
-                    </div>  <!-- page banner cont -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-    
-    <!--====== PAGE BANNER PART ENDS ======-->
-    
-    <!--====== CONTACT PART START ======-->
-    
-    <section id="contact-page" class="pt-90 pb-120 gray-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="contact-from mt-30">
-                        <div class="section-title">
-                            <h5>Contact Us</h5>
-                            <h2>Keep in touch</h2>
-                        </div> <!-- section title -->
-                        <div class="main-form pt-45">
-                            <form id="contact-form" action="" method="post" >
-                                {% csrf_token %}
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="singel-form form-group">
-                                            <input name="name" type="text" placeholder="Your name" data-error="Name is required." required="required">
-                                            <div class="help-block with-errors"></div>
-                                        </div> <!-- singel form -->
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="singel-form form-group">
-                                            <input name="email" type="email" placeholder="Email" data-error="Valid email is required." required="required">
-                                            <div class="help-block with-errors"></div>
-                                        </div> <!-- singel form -->
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="singel-form form-group">
-                                            <input name="subject" type="text" placeholder="Subject" data-error="Subject is required." required="required">
-                                            <div class="help-block with-errors"></div>
-                                        </div> <!-- singel form --> 
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="singel-form form-group">
-                                            <input name="phone" type="text" placeholder="Phone" data-error="Phone is required." required="required">
-                                            <div class="help-block with-errors"></div>
-                                        </div> <!-- singel form -->
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="singel-form form-group">
-                                            <textarea name="messege" placeholder="Messege" data-error="Please,leave us a message." required="required"></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div> <!-- singel form -->
-                                    </div>
-                                    <p class="form-message"></p>
-                                    <div class="col-md-12">
-                                        <div class="singel-form">
-                                            <button type="submit" class="main-btn">Send</button>
-                                        </div> <!-- singel form -->
-                                    </div> 
-                                </div> <!-- row -->
-                            </form>
-                        </div> <!-- main form -->
-                    </div> <!--  contact from -->
-                </div>
-                <div class="col-lg-5">
-                    <div class="contact-address mt-30">
-                        <ul>
-                            <li>
-                                <div class="singel-address">
-                                    <div class="icon">
-                                        <i class="fa fa-home"></i>
-                                    </div>
-                                    <div class="cont">
-                                        <p>WZ56 Raj Nagar 1, Palam Colony, New Delhi - 110077, India</p>
-                                    </div>
-                                </div> <!-- singel address -->
-                            </li>
-                            <li>
-                                <div class="singel-address">
-                                    <div class="icon">
-                                        <i class="fa fa-phone"></i>
-                                    </div>
-                                    <div class="cont">
-                                        <p>+91-8851793185</p>
-                                        
-                                    </div>
-                                </div> <!-- singel address -->
-                            </li>
-                            <li>
-                                <div class="singel-address">
-                                    <div class="icon">
-                                        <i class="fa fa-envelope-o"></i>
-                                    </div>
-                                    <div class="cont">
-                                        <p>info@newwayprofessionals.in</p>
-                                        
-                                    </div>
-                                </div> <!-- singel address -->
-                            </li>
-                        </ul>
-                    </div> <!-- contact address -->
-                    <div class="map mt-30">
-                        <div id="contact-map"></div>
-                    </div> <!-- map -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-    
-    <!--====== CONTACT PART ENDS ======-->
+    <!-- <<<<=====Template inheritence====>>>>> -->
+
+
+    {% endblock body %}
    
     <!--====== FOOTER PART START ======-->
+    
     <footer id="footer-part">
         <div class="footer-top pt-40 pb-70">
             <div class="container">
@@ -314,14 +252,20 @@
                             <div class="logo">
                                 <a href=""><img src="static/finalmainlogo.png" width="220px" alt="Logo"></a>
                             </div>
-                            <p>We are responsible for designing and delivering training on a wide range of software applications. Students can choose from a variety of advanced technology courses, including programming.
-                                It is our duty to train computer professionals and train departments in large companies as to what skills they need. In addition, we also offer training facilities to help prepare you to use the newest technologies in the market.</p>
+                            <p>We are responsible for designing and delivering training on a wide range of software
+                                applications. Students can choose from a variety of advanced technology courses,
+                                including programming.
+                                It is our duty to train computer professionals and train departments in large companies
+                                as to what skills they need. In addition, we also offer training facilities to help
+                                prepare you to use the newest technologies in the market.</p>
                             <ul class="mt-20">
                                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="https://www.instagram.com/newwayprofessionals_/"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/new-way-professionals-851088212/"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.instagram.com/newwayprofessionals_/"><i
+                                            class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/new-way-professionals-851088212/"><i
+                                            class="fa fa-linkedin"></i></a></li>
                             </ul>
                         </div> <!-- footer about -->
                     </div>
@@ -335,7 +279,7 @@
                                 <li><a href="{%url 'about'%}"><i class="fa fa-angle-right"></i>About us</a></li>
                                 <li><a href="{%url 'courses'%}"><i class="fa fa-angle-right"></i>Courses</a></li>
                                 <li><a href="{%url 'contact'%}"><i class="fa fa-angle-right"></i>Contact</a></li>
-                                
+
                             </ul>
                             <!-- <ul>
                                 <li><a href="#"><i class="fa fa-angle-right"></i>Gallery</a></li>
@@ -359,53 +303,62 @@
                                 
                             </ul>
                         </div> support -->
-                        <div class="col-lg-3 col-md-6">
-                            <div class="footer-address mt-40">
-                                <div class="footer-title pb-25">
-                                    <h6>Contact Us</h6>
-                                </div>
-                                <ul>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="fa fa-home"></i>
-                                        </div>
-                                        <div class="cont">
-                                            <p>WZ56 Raj Nagar 1, Palam Colony, New Delhi - 110077, India.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="fa fa-phone"></i>
-                                        </div>
-                                        <div class="cont">
-                                            <p>+91-8851793185</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <i class="fa fa-envelope-o"></i>
-                                        </div>
-                                        <div class="cont">
-                                            <p>info@newwayprofessionals.in</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div> <!-- footer address -->
-                        </div>
-                    </div> <!-- row -->
-
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-address mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Contact Us</h6>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>WZ56 Raj Nagar 1, Palam Colony, New Delhi - 110077, India.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>+91-8851793185</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-envelope-o"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>info@newwayprofessionals.in</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- footer address -->
                     </div>
-                   
-            </div> <!-- container -->
+                </div> <!-- row -->
+
+            </div>
+
+        </div> <!-- container -->
         </div> <!-- footer top -->
-    
+
+
+        </div>
+        </div> <!-- row -->
+        </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+
     <!--====== FOOTER PART ENDS ======-->
-   
-    <!--====== BACK TO TOP PART START ======-->
-    
+
+    <!--====== BACK TO TP PART START ======-->
+
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-    
-    <!--====== BACK TO TOP PART ENDS ======-->
+
+    <!--====== BACK TO TP PART ENDS ======-->
+
+   
     
     
     

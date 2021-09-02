@@ -6,6 +6,7 @@ urlpatterns = [
     path("about",about,name="about"),
     path("courses",courses,name="courses"),
     path("contact",contact,name="contact"),
+    path("courses_single",course_single,name='course_single')
 
 ]
 

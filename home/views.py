@@ -19,6 +19,9 @@ def courses(request):
 def contact(request):
     return render(request,'contact.html')
 
+def course_single(request):
+    return render(request,'powershell.html')
+
 
 
 

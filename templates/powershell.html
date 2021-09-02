@@ -1,0 +1,384 @@
+{% extends 'course_single.html' %}
+
+{% block body %}
+    <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(static/images/page-banner-2.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-banner-cont">
+                        <h2>Learn basic Power-Shell</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{% url 'courses'%}">Courses</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Learn basic Power-Shell</li>
+                            </ol>
+                        </nav>
+                    </div>  <!-- page banner cont -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== PAGE BANNER PART ENDS ======-->
+    
+    <!--====== COURSES SINGEl PART START ======-->
+    
+    <section id="corses-singel" class="pt-90 pb-120 gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="corses-singel-left mt-30">
+                        <div class="title">
+                            <h3>Learn basis Power-Shell from start for beginner</h3>
+                        </div> <!-- title -->
+                        <div class="course-terms">
+                            <ul>
+                                <li>
+                                    <div class="teacher-name">
+                                        <div class="thum">
+                                            <img src="static/images/course/teacher/t-1.jpg" alt="Teacher">
+                                        </div>
+                                        <div class="name">
+                                            <span>Teacher</span>
+                                            <h6>Anurag sharma</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="course-category">
+                                        <span>Category</span>
+                                        <h6>Programming </h6>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="review">
+                                        <span>Review</span>
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li class="rating">(24 Reviws)</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- course terms -->
+                        
+                        <div class="corses-singel-image pt-50">
+                            <img style="border-radius: 10px;" src="static/images/course/newpower.jpg" alt="Courses">
+                        </div> <!-- corses singel image -->
+                        
+                        <div class="corses-tab mt-30">
+                            <ul class="nav nav-justified" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="active" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="curriculam-tab" data-toggle="tab" href="#curriculam" role="tab" aria-controls="curriculam" aria-selected="false">Curriculam</a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Reviews</a>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                                    <div class="overview-description">
+                                        <div class="singel-description pt-40">
+                                            <h6>Course Summery</h6>
+                                            <p>In this course you will powershell from the very basic.and we provide one to one doubt clear with real time trainner's.</p>
+                                        </div>
+                                        <div class="singel-description pt-40">
+                                            <h6>Requrements</h6>
+                                            <p>Basic understanding of operating system.</p>
+                                        </div>
+                                    </div> <!-- overview description -->
+                                </div>
+                                <div class="tab-pane fade" id="curriculam" role="tabpanel" aria-labelledby="curriculam-tab">
+                                    <div class="curriculam-cont">
+                                        <div class="title">
+                                            <h6>Learn basis Power-Shell Lecture Started</h6>
+                                        </div>
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="card">
+                                                <div class="card-header" id="headingOne">
+                                                    <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        <ul>
+                                                            <li><i class="fa fa-file-o"></i></li>
+                                                            <li><span class="lecture">Lecture 1</span></li>
+                                                            <li><span class="head">Introduction to Power-Shell</span></li>
+                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
+                                                        </ul>
+                                                    </a>
+                                                </div>
+
+                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <p>PowerShell is a powerful tool used to automate many day-to-day tasks that a Windows Admin or a normal Windows End User might encounter..</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="card">
+                                                <div class="card-header" id="headingTow">
+                                                    <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseTow" aria-expanded="true" aria-controls="collapseTow">
+                                                        <ul>
+                                                            <li><i class="fa fa-file-o"></i></li>
+                                                            <li><span class="lecture">Lecture 2</span></li>
+                                                            <li><span class="head">String immutability/indexing.</span></li>
+                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
+                                                        </ul>
+                                                    </a>
+                                                </div>
+
+                                                <div id="collapseTow" class="collapse" aria-labelledby="headingTow" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <p>Working with strings and indexing.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-header" id="headingThree">
+                                                    <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        <ul>
+                                                            <li><i class="fa fa-file-o"></i></li>
+                                                            <li><span class="lecture">Lecture 3</span></li>
+                                                            <li><span class="head">conditional statements.</span></li>
+                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
+                                                        </ul>
+                                                    </a>
+                                                </div>
+                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <p>Conditional statements for putting the codition like if or else.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-header" id="headingFore">
+                                                    <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseFore" aria-expanded="false" aria-controls="collapseFore">
+                                                        <ul>
+                                                            <li><i class="fa fa-file-o"></i></li>
+                                                            <li><span class="lecture">Lecture 4</span></li>
+                                                            <li><span class="head">What is Operators in powershell</span></li>
+                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
+                                                        </ul>
+                                                    </a>
+                                                </div>
+                                                <div id="collapseFore" class="collapse" aria-labelledby="headingFore" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <p>Operators (Arithmetic operators,Logical operators,etc..) .</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-header" id="headingFive">
+                                                    <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                        <ul>
+                                                            <li><i class="fa fa-file-o"></i></li>
+                                                            <li><span class="lecture">Lecture 5</span></li>
+                                                            <li><span class="head">What is Arrays in powershell</span></li>
+                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
+                                                        </ul>
+                                                    </a>
+                                                </div>
+                                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <p>Array is type of data structure.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="card">
+                                                <div class="card-header" id="headingSix">
+                                                    <a href="#" data-toggle="collapse" class="collapsed" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                        <ul>
+                                                            <li><i class="fa fa-file-o"></i></li>
+                                                            <li><span class="lecture">Lecture 6</span></li>
+                                                            <li><span class="head">For each loop in powershell.</span></li>
+                                                            <li><span class="time d-none d-md-block"><i class="fa fa-clock-o"></i> <span> 00.30.00</span></span></li>
+                                                        </ul>
+                                                    </a>
+                                                </div>
+                                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <p>Loops are really important term for powershell.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                           
+                                        </div>
+                                    </div> <!-- curriculam cont -->
+                                </div>
+                               
+                                <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                                    <div class="reviews-cont">
+                                        <div class="title">
+                                            <h6>Student Reviews</h6>
+                                        </div>
+                                        <ul>
+                                           <li>
+                                               <div class="singel-reviews">
+                                                    <div class="reviews-author">
+                                                        <div class="author-thum">
+                                                            <img src="static/images/review/r-1.jpg" alt="Reviews">
+                                                        </div>
+                                                        <div class="author-name">
+                                                            <h6>Bobby Aktar</h6>
+                                                            <span>June 03, 2020</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="reviews-description pt-20">
+                                                        <p>One of the fabulous place to learn coding. It was very good experience. Anurag sir's focus on basics helps me to grasp knowledge very quickly and efficiently.
+Sir not only focused on theory but gave different practical example which really helpful.</p>
+                                                        <div class="rating">
+                                                            <ul>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                            </ul>
+                                                            <span>/ 5 Star</span>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- singel reviews -->
+                                           </li>
+                                           <li>
+                                               <div class="singel-reviews">
+                                                    <div class="reviews-author">
+                                                        <div class="author-thum">
+                                                            <img src="static/images/review/r-2.jpg" alt="Reviews">
+                                                        </div>
+                                                        <div class="author-name">
+                                                            <h6>Humayun Ahmed</h6>
+                                                            <span>April 13, 2019</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="reviews-description pt-20">
+                                                        <p>This institute focuses more on learning rather than just teaching.. Anurag is a great teacher and explains every topic in detail and he makes sure that each student understands the topic clearly before moving on.
+
+                                                            I joined this institute and within a few classes all my basics were cleared very well. Hoping to learn even more.. 😊😊</p>
+                                                        <div class="rating">
+                                                            <ul>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                            </ul>
+                                                            <span>/ 5 Star</span>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- singel reviews -->
+                                           </li>
+                                           <li>
+                                               <div class="singel-reviews">
+                                                    <div class="reviews-author">
+                                                        <div class="author-thum">
+                                                            <img src="static/images/review/r-3.jpg" alt="Reviews">
+                                                        </div>
+                                                        <div class="author-name">
+                                                            <h6>Tania Aktar</h6>
+                                                            <span>April 29, 2021</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="reviews-description pt-20">
+                                                        <p>My experience so far is awesome. I had enrolled for the powershell course. The faculty and environment there is very supportive.This is the best place to learn more about the new cutting edge technologies.
+                                                            I would highly recommend you to join this institute.</p>
+                                                        <div class="rating">
+                                                            <ul>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                                <li><i class="fa fa-star"></i></li>
+                                                            </ul>
+                                                            <span>/ 5 Star</span>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- singel reviews -->
+                                           </li>
+                                        </ul>
+                                       
+                                    </div> <!-- reviews cont -->
+                                </div>
+                            </div> <!-- tab content -->
+                        </div>
+                    </div> <!-- corses singel left -->
+                    
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6">
+                            <div class="course-features mt-30">
+                               <h4>Course Features </h4>
+                                <ul>
+                                    <li><i class="fa fa-clock-o"></i>Duaration : <span>1:30 Hours</span></li>
+                                    <li><i class="fa fa-clone"></i>Leactures : <span>06</span></li>
+                                    <!-- <li><i class="fa fa-beer"></i>Quizzes :  <span>05</span></li> -->
+                                    <li><i class="fa fa-user-o"></i>Students :  <span>78</span></li>
+                                </ul>
+                                <div class="price-button pt-10">
+                                    <span>Price : <b>299 INR</b></span>
+                                    <a style="padding: 0px 21px;" href="#" class="main-btn">Enroll Now</a>
+                                </div>
+                            </div> <!-- course features -->
+                        </div>
+                        <!-- <div class="col-lg-12 col-md-6">
+                            <div class="You-makelike mt-30">
+                                <h4>You make like </h4> 
+                                <div class="singel-makelike mt-20">
+                                    <div class="image">
+                                        <img src="static/images/your-make/y-1.jpg" alt="Image">
+                                    </div>
+                                    <div class="cont">
+                                        <a href="#"><h4>Introduction to machine languages</h4></a>
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-user"></i>31</a></li>
+                                            <li>$50</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="singel-makelike mt-20">
+                                    <div class="image">
+                                        <img src="static/images/your-make/y-1.jpg" alt="Image">
+                                    </div>
+                                    <div class="cont">
+                                        <a href="#"><h4>How to build a basis game with java </h4></a>
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-user"></i>31</a></li>
+                                            <li>$50</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="singel-makelike mt-20">
+                                    <div class="image">
+                                        <img src="static/images/your-make/y-1.jpg" alt="Image">
+                                    </div>
+                                    <div class="cont">
+                                        <a href="#"><h4>Basic accounting from primary</h4></a>
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-user"></i>31</a></li>
+                                            <li>$50</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div> <!-- row -->
+           
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== COURSES SINGEl PART ENDS ======-->
+{% endblock body %}

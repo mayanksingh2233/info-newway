@@ -97,7 +97,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4">
                         <div class="logo">
-                            <a href="#">
+                            <a href="">
                                 <img src="static/finalmainlogo.png" width="200" alt="Logo">
                             </a>
                         </div>
@@ -113,9 +113,16 @@
                                     <span>+91-8851793185</span>
                                 </div>
                             </div>
-                            <div class="button float-left">
-                                <a href="#" class="main-btn">Sign-Up</a>
-                                <a href="#" class="main-btn">Login</a>
+                           <div class="button float-left">
+                            {% if  message %}
+                            <div style=" padding: 14px;color:rgb(71, 71, 231)" class="msg">
+                                <h5>{{message}}</h5>
+                            </div>
+                            {% else %}
+                            
+                            <a href="{%url 'register'%}"  id="show-login" class="main-btn">Register</a>
+                                <a href="{%url 'login'%}" class="main-btn">Login</a>
+                            {% endif %}
                             </div>
                         </div>
                     </div>
@@ -137,14 +144,14 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="{%url 'home'%}">Home</a>
+                                        <a href="{%url 'home'%}">Home</a>
                                         
                                     </li>
                                     <li class="nav-item">
                                         <a href="{%url 'about'%}">About us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{%url 'courses'%}">Courses</a>
+                                        <a class="active" href="{%url 'courses'%}">Courses</a>
                                         
                                     </li>
                                     

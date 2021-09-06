@@ -1,5 +1,5 @@
-from django.shortcuts import render
-
+from django.shortcuts import redirect, render
+from .models import Profile
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -8,60 +8,103 @@ from django.contrib.auth import authenticate
 # Create your views here.
 
 def index(request):
+    if request.user.is_authenticated:
+        name=request.user.get_full_name()
+        print(name)
+        context={'message':'Hello, '+ name}
+        return render(request,'index.html',context)
+    else:
+        return render(request,'index.html')
+
     return render(request,'index.html')
 
 def about(request):
+    if request.user.is_authenticated:
+        name=request.user.get_full_name()
+        print(name)
+        context={'message':'Hello, '+ name}
+        return render(request,'about.html',context)
+    else:
+        return render(request,'about.html')
     return render(request,'about.html')
 
 def courses(request):
+    if request.user.is_authenticated:
+        name=request.user.get_full_name()
+        print(name)
+        context={'message':'Hello, '+ name}
+        return render(request,'courses.html',context)
+    else:
+        return render(request,'courses.html')
     return render(request,'courses.html')
 
 def contact(request):
+    if request.user.is_authenticated:
+        name=request.user.get_full_name()
+        print(name)
+        context={'message':'Hello, '+ name}
+        return render(request,'contact.html',context)
+    else:
+        return render(request,'contact.html')
     return render(request,'contact.html')
 
 def course_single(request):
+    if request.user.is_authenticated:
+        name=request.user.get_full_name()
+        print(name)
+        context={'message':'Hello, '+ name}
+        return render(request,'powershell.html',context)
+    else:
+        return render(request,'powershell.html')
     return render(request,'powershell.html')
 
 
+# login or sigup code 
 
+def login_url(request):
+    if request.method =='POST':
+        email =request.POST.get("email")
+        password = request.POST.get("password")
 
-# login sigup code 
+        
 
-# def login(request):
-#     if request.method =='POST':
-#         email =request.POST.get("email")
-#         password = request.POST.get("password")
-
-#         user = authenticate(username=email, password=password)
-#         if user is not None:
-#             return render(request,'buynow.html')
-#         else:
-#             context={'message':'Email or Password dose not match','class':'danger'}
-#             return render(request,'login.html',context)
-#     return render(request,'login.html')
+        user = authenticate(username=email, password=password)
+        if user is not None:
+            if user.is_authenticated:
+                login(request,user)
+                name=user.get_full_name()
+                print(name)
+                context={'message':'Hello, '+ name}
+                return render(request,'index.html',context)
+            else:
+                return render(request,'index.html')
+        else:
+            context={'message':'Invalid Email id or Password','class':'danger'}
+            return render(request,'login.html',context)
+    return render(request,'login.html')
             
-# def register(request):
-#     if request.method=="POST":
-#         email = request.POST.get("email")
-#         name = request.POST.get("name")
-#         mobile = request.POST.get("mobile")
-#         password =request.POST.get("password")
-#         print(email,name,mobile)
+def register(request):
+    if request.method=="POST":
+        email = request.POST.get("email")
+        name = request.POST.get("name")
+        mobile = request.POST.get("mobile")
+        password =request.POST.get("password")
+        print(email,name,mobile)
 
-#         check_user=User.objects.filter(email=email).first()
-#         check_profile=Profile.objects.filter(mobile=mobile).first()
+        check_user=User.objects.filter(email=email).first()
+        check_profile=Profile.objects.filter(mobile=mobile).first()
     
-#         if check_user or check_profile:
-#             context={'message':'User already exists','class':'danger'}
-#             return render(request,'register.html',context)
-#         else:
-#             user =User.objects.create_user(username=email,email=email,password=password)
-#             user.save()
-#             print("user_created")
-#             profile = Profile(user=user ,mobile=mobile)
-#             profile.save()
-#             print("profile created")
+        if check_user or check_profile:
+            context={'message':'User already exists','class':'danger'}
+            return render(request,'register.html',context)
+        else:
+            user =User.objects.create_user(username=email,first_name=name,email=email,password=password)
+            user.save()
+            print("user_created")
+            profile = Profile(user=user ,mobile=mobile)
+            profile.save()
+            print("profile created")
        
-#         # user=User(email=email ,first_name=name)
-#         # user.save()
-#     return render(request,'register.html')
+        # user=User(email=email ,first_name=name)
+        # user.save()
+    return render(request,'register.html')

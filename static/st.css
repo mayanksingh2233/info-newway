@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+.container .content{
+    position: relative;
+    max-width: 800px;
+}
+h2{
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+a{
+    position: relative;
+    padding: 5px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;
+    background: rgb (134,43,43);
+    transition: 1s;
+    background-color: #333;
+}
+a:hover{
+    transition: 1s;
+    background: #2b5c59;
+}
+#popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+#popup.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transform: 0.5s;
+}

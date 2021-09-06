@@ -113,10 +113,15 @@
                                 </div>
                             </div>
                             <div class="button float-left">
-                                <a href="#" class="main-btn">Sign-Up</a>
-                                <a href="#" class="main-btn">Login</a>
-                                
-
+                            {% if  message %}
+                            <div style=" padding: 14px;color:rgb(71, 71, 231)" class="msg">
+                                <h5>{{message}}</h5>
+                            </div>
+                            {% else %}
+                            
+                            <a href="{%url 'register'%}"  id="show-login" class="main-btn">Register</a>
+                                <a href="{%url 'login'%}" class="main-btn">Login</a>
+                            {% endif %}
                             </div>
                         </div>
                     </div>
@@ -139,7 +144,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="{%url 'home'%}">Home</a>
+                                        <a href="{%url 'home'%}">Home</a>
                                         <!-- <ul class="sub-menu">
                                             <li><a class="active" href="index-2.html">Home 01</a></li>
                                             <li><a href="index-3.html">Home 02</a></li>

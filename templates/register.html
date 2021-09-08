@@ -130,7 +130,7 @@ body {
    {% if message1 %}
   <div class="alert alert-{{class}}">
     {{message1}}
-    <a href="/login">Login now</a>
+    <a href="{%url 'login'%}">Login now</a>
     </div>
     {% endif %}
   <p>Already have account? <a href="{%url 'login'%}">Login</a></p>

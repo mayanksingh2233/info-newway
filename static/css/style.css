@@ -3785,6 +3785,19 @@ p.form-message.error {
 }
 
 
+.whatsapp {
+    position: fixed;
+    right: 13px;
+    top: 80%;
+    z-index: 10;
+}
+.whatsapp h5 {
+    color: white;
+    background: #20b20f;
+    padding: 12px;
+    border-radius: 10px;
+}
+
 
 
 

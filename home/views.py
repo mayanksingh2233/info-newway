@@ -84,6 +84,7 @@ def login_url(request):
     return render(request,'login.html')
             
 def register(request):
+    context1 = {'message1':'Login has been created','class':'success'}
     if request.method=="POST":
         email = request.POST.get("email")
         name = request.POST.get("name")
@@ -104,6 +105,7 @@ def register(request):
             profile = Profile(user=user ,mobile=mobile)
             profile.save()
             print("profile created")
+            return render(request,'register.html',context1)
        
         # user=User(email=email ,first_name=name)
         # user.save()
